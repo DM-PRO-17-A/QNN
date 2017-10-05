@@ -9,5 +9,6 @@ object TempMain {
     println("YAY!")
     chiselMainTest(cmdArgs, () => Module(new Mux2())){ c => new Mux2Tests(c)}
     chiselMainTest(cmdArgs, () => Module(new Max(4,8))){ c => new MaxTests(c)}
+    chiselMainTest(cmdArgs, () => Module(new Sum(9,8))){ c => new SumTests(c)}
   }
 }
