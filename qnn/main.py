@@ -4,6 +4,7 @@ import numpy as np
 from QNN.layers import *
 import pickle
 from IPython.display import display
+from QNN.layers_rebuilt import *
 
 
 # define a small utility function to first display, then prepare the

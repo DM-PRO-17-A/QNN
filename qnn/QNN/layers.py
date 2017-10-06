@@ -224,7 +224,10 @@ class QNNPoolingLayer(QNNLayer):
             wnd = im2col_indices(chan_img, self.k, self.k, padding=0,
             stride_y=self.s, stride_x=self.s)
             # each window is a column -- get the reduction along columns
+            print(wnd.shape)
             if self.poolFxn == "MAX":
+                print(wnd.max(axis = 0).shape)
+                print(wnd.max(axis = 0))
                 out_img[c]=wnd.max(axis = 0).flatten()
             elif self.poolFxn == "AVE":
                 out_img[c]=wnd.mean(axis = 0).flatten()

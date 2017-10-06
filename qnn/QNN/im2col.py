@@ -61,7 +61,6 @@ def get_im2col_indices(x_shape, field_height, field_width, padding=0, stride_y=1
   # Disse er repetert 15 ganger og de oppgjor dermed 
   # (5*15 = 75, 28*28 = 784) 
   # 
-  print(np.arange(C))
   k = np.repeat(np.arange(C), field_height * field_width)
   # repeterer [0 1 2] 25 ganger, altsaa [0 0 0 0 0 ... 1 1 1 1 1.. 2 2..]
   # (1,75)
@@ -101,9 +100,7 @@ def im2col_indices(x, field_height, field_width, padding=0, stride_y=1, stride_x
   # x_padded[:,k,i] = (1, 75, 784, 32)
   # x_padded[:,k,i,j] = (1, 75, 784)
 
-  # Den lager en ny matrise med  
-  
-  print(cols)
+  # Den lager en ny matrise med 75 rader med tall fra 
   
   C = x.shape[1]
   #C=3
